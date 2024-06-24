@@ -54,6 +54,7 @@ body {
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color)!important;
 } 
 
 a {
@@ -80,7 +81,6 @@ img {
   background-color: var(--bg-color);
   -webkit-box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
-  transition: 0.3s all ease;
   animation: fromTop 1s ease-out;
 }
 
@@ -120,6 +120,48 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: hero-animation 0.2s forwards;
+}
+
+@keyframes hero-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+#hero h1, #hero p {
+  animation: hero-text-animation 1s forwards;
+}
+
+@keyframes hero-text-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+#hero form {
+  animation: hero-form-animation 1s forwards;
+}
+
+@keyframes hero-form-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 .carousel-inner h5 {
@@ -157,6 +199,22 @@ html, body {
   padding-bottom: 50px;
 }
 
+.card {
+  animation: fromTop 1s forwards;
+  opacity: 0;
+}
+
+@keyframes fromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 #course-cards .card {
   border-radius: 15px!important;
   border: 1px solid var(--bg-color)!important;
@@ -181,6 +239,22 @@ html, body {
   color: #333;
 }
 
+#contact form, #contact h2 {
+  animation: fromLeft 1s forwards;
+  opacity: 0;
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 #about {
   background-image: url(../images/hero.jpg)!important;
   background-size: cover;
@@ -192,6 +266,22 @@ html, body {
   align-items: center;
   justify-content: center;
   color: black;
+}
+
+#about .container {
+  animation: fromLeft 1s forwards;
+  opacity: 0;
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /* Default styles for the buttons */
