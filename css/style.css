@@ -80,6 +80,21 @@ img {
   background-color: var(--bg-color);
   -webkit-box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+  transition: 0.3s all ease;
+  animation: fromTop 1s ease-out;
+}
+
+@keyframes fromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.navbar:hover {
+  transform: translateY(-3px);
 }
 
 .navbar .container {
@@ -179,9 +194,15 @@ html, body {
   color: black;
 }
 
+/* Default styles for the buttons */
+.login {
+  display: flex;
+}
+
+/* Styles for screens below 1000px width */
 @media (max-width: 1000px) {
-  /* hide that toggler in navbar if screen is less than 1000px */
-  .navbar-toggler {
-    order: 40;
+  .login {
+    flex-direction: column;
+    align-items: center;
   }
 }
