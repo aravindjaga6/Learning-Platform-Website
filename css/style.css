@@ -182,6 +182,6 @@ html, body {
 @media (max-width: 1000px) {
   /* hide that toggler in navbar if screen is less than 1000px */
   .navbar-toggler {
-    display: none;
+    order: 40;
   }
 }
